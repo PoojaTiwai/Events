@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>function delayExecution(callback) {
+    setTimeout(callback, 2000);
+}
+
+// Example usage:
+const task = () => {
+    console.log("Task executed after 2 seconds.");
+};
+
+// Call delayExecution and pass the task function as a callback
+delayExecution(task);
+</script> 
+</body>
+</html>

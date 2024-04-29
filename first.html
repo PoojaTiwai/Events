@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function tickTock() {
+        let counter = 1;
+    
+        const intervalId = setInterval(() => {
+            if (counter % 5 === 0) {
+                console.log("TickTock");
+            } else if (counter % 2 === 0) {
+                console.log("Tock");
+            } else {
+                console.log("Tick");
+            }
+    
+            counter++;
+    
+            if (counter > 10) {
+                clearInterval(intervalId); // Stop after 10 iterations
+            }
+        }, 1000);
+    }
+    
+    tickTock(); // Call the function to start the intervals
+    
+    </script>
+</body>
+</html>

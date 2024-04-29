@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   function rotateArray(arr) {
+    const intervalId = setInterval(() => {
+        arr.unshift(arr.pop()); // Move the last element to the front
+        console.log(arr); // Print the rotated array
+    }, 3000);
+
+    return intervalId; // Return the interval ID in case you want to stop it later
+}
+
+// Example usage:
+const myArray = [1, 2, 3, 4];
+const rotationIntervalId = rotateArray(myArray);
+
+</script> 
+</body>
+</html>

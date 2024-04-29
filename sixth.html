@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>function promptWithTimeout() {
+    let userInput;
+
+    // Prompt the user for input
+    const promptUser = () => {
+        userInput = prompt("Please enter your response:");
+
+        if (!userInput) {
+            // Display "You're too slow!" if the user doesn't respond within 10 seconds
+            setTimeout(() => {
+                alert("You're too slow!");
+            }, 10000);
+        }
+    };
+
+    // Start the prompt
+    promptUser();
+}
+
+// Call the function to prompt the user for input
+promptWithTimeout();
+</script>  
+</body>
+</html>

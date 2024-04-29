@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function fetchDataAndUpdateUI(apiUrl) {
+        const updateUI = (data) => {
+            // Update the UI with the new data
+            console.log("Updating UI with data:", data);
+            // Replace this console.log with your actual UI update logic
+        };
+    
+        const fetchData = () => {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => updateUI(data))
+                .catch(error => console.error('Error fetching data:', error));
+        };
+    
+        // Initial fetch
+        fetchData();
+    
+        // Set interval to fetch data every 5 seconds
+        const intervalId = setInterval(fetchData, 5000);
+    
+        return intervalId; // Return the interval ID in case you want to stop it later
+    }
+    
+    // Example usage:
+    const apiUrl = "https://api.example.com/data";
+    const intervalId = fetchDataAndUpdateUI(apiUrl);
+    </script>
+</body>
+</html>

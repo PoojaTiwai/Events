@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        font-size: 50px;
+        color: purple;
+        text-align: center;
+        font-weight: 800;
+        
+    }
+</style>
+<body>
+    <p><span id="hour">00 </span>: <span id="min">00</span>: <span id="sec">00</span></p>
+    <script>
+
+        // let ar = [10,45,64,34,33];
+
+
+        // //filter map forEach 🔴🔴🥴
+        // let ab = ar.map((number,index)=>{
+        //     if (number%2==0){
+        //         return number;
+        //     }
+        // })
+        // console.log(ab);
+        // var now = new Date();
+        // console.log(now);
+        // console.log(now.toDateString());
+
+        // document.write(now.getHours(),":",now.getMinutes(),":",now.getSeconds());
+
+       
+
+        function check(){
+            var x = document.getElementById("hour");
+            var y = document.getElementById("min");
+            var z = document.getElementById("sec");
+
+
+
+            var now = new Date();
+            var a = now.getHours();
+            var b = now.getMinutes();
+            var c = now.getSeconds();
+            // document.write(a,":",b,":",c);
+
+            x.innerHTML = a;
+            y.innerHTML = b;
+            z.innerHTML = c;
+
+
+            
+
+        }
+
+        setInterval(check,1000);
+
+    </script>
+    
+</body>
+</html>
